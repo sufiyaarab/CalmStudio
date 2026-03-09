@@ -1,0 +1,1 @@
+import cn from "classnames"; export function Badge({children,tone="neutral"}:{children:React.ReactNode;tone?:"neutral"|"accent"|"soft"}){return (<span className={cn("badge",tone==="accent"&&"bg-accent-700 text-white",tone==="soft"&&"bg-cream-200 text-ink-900",tone==="neutral"&&"bg-stoney-100 text-ink-900")}>{children}</span>);}

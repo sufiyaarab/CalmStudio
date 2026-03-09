@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html, body { height: 100%; }
+
+body {
+  @apply text-ink-900;
+  background:
+    radial-gradient(900px 600px at 20% 10%, rgba(109,40,217,0.16), transparent 58%),
+    radial-gradient(900px 600px at 80% 20%, rgba(39,94,91,0.12), transparent 58%),
+    linear-gradient(180deg, #fbfbf7 0%, #f7f6ef 45%, #efeddc 100%);
+}
+
+@layer components {
+  .glass { @apply bg-white/65 backdrop-blur border border-stoney-200 shadow-soft rounded-xl2; }
+  .card { @apply glass p-5; }
+  .btn { @apply inline-flex items-center justify-center rounded-xl2 px-4 py-3 font-medium transition; }
+  .btn-primary { @apply btn bg-accent-700 text-white hover:bg-accent-600; }
+  .btn-ghost { @apply btn bg-stoney-100 text-ink-900 hover:bg-stoney-200; }
+  .btn-soft { @apply btn bg-white/65 border border-stoney-200 hover:bg-white; }
+  .input { @apply w-full rounded-xl2 border border-stoney-200 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-accent-600/30; }
+  .cover { @apply rounded-xl2 border border-stoney-200 shadow-soft overflow-hidden; }
+  .playerbar { @apply fixed bottom-0 left-0 right-0 z-30 bg-white/80 backdrop-blur border-t border-stoney-200 shadow-player; }
+}
+
+@layer components {
+  .pill { @apply inline-flex items-center gap-2 rounded-full border border-stoney-200 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-900 hover:bg-white transition; }
+  .pill-on { @apply bg-ink-900 text-white border-ink-900 hover:bg-ink-900; }
+  .sectionTitle { @apply text-lg font-semibold tracking-tight; }
+  .muted { @apply text-stoney-600; }
+}
+
+/* === Mystic Theme Background (inspired by provided images) === */
+.mystic-bg{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 600px at 25% 15%, rgba(255,183,77,0.28), transparent 58%),
+    radial-gradient(900px 600px at 75% 20%, rgba(109,40,217,0.16), transparent 60%),
+    radial-gradient(1100px 800px at 50% 110%, rgba(39,94,91,0.16), transparent 60%),
+    linear-gradient(180deg, rgba(251,251,247,0.92) 0%, rgba(247,246,239,0.92) 55%, rgba(239,237,220,0.92) 100%),
+    url("/theme/mystic-2.png"),
+    url("/theme/mystic-1.png");
+  background-size:
+    auto,
+    auto,
+    auto,
+    cover,
+    cover,
+    cover;
+  background-position:
+    center,
+    center,
+    center,
+    center,
+    center,
+    center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+@media (min-width: 768px){
+  .mystic-bg{ filter: blur(0.5px) saturate(1.05) contrast(1.02); }
+}

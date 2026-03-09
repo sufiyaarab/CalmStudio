@@ -1,0 +1,1 @@
+import { ReactNode } from "react"; import cn from "classnames"; export function Container({children,className}:{children:ReactNode;className?:string}){return <div className={cn("mx-auto w-full max-w-4xl px-4 pb-28",className)}>{children}</div>;}

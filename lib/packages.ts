@@ -1,0 +1,83 @@
+import { PackageCard, SymptomTag } from "./types";
+
+export const SYMPTOMS: { id: SymptomTag; label: string; subtitle: string }[] = [
+  { id: "anxiety", label: "Anxiety", subtitle: "racing thoughts, worry, panic-ish feelings" },
+  { id: "stress", label: "Stress", subtitle: "feeling overloaded, tense, on-edge" },
+  { id: "sleep", label: "Sleep", subtitle: "trouble falling asleep or waking at night" },
+  { id: "hot_flashes", label: "Hot flashes", subtitle: "sudden heat, flushing" },
+  { id: "night_sweats", label: "Night sweats", subtitle: "waking hot/sweaty" },
+  { id: "mood", label: "Mood", subtitle: "irritability, low mood, emotional swings" },
+  { id: "focus", label: "Focus", subtitle: "brain fog, attention issues" },
+  { id: "confidence", label: "Confidence", subtitle: "self-doubt, performance nerves" },
+  { id: "tension", label: "Body tension", subtitle: "jaw/shoulders, restlessness" },
+  { id: "emotional_release", label: "Emotional release", subtitle: "processing feelings, letting go" },
+  { id: "spiritual_optin", label: "Spiritual / energy (opt‑in)", subtitle: "sound medicine themes, intention work" },
+];
+
+export const ALL_PACKAGES: PackageCard[] = [
+  {
+    id: "starter-calm",
+    name: "Starter Calm",
+    tier: "starter",
+    for: "Mild stress/anxiety • you want something simple",
+    supports: "Supports calm and nervous-system settling",
+    durationDays: 7,
+    includes: ["1 curated playlist", "Core library access (selected)", "Timer + favorites"],
+    playlists: [{ name: "Start Here (7 days)", trackIds: ["breath-reset-3","calm-mind-20","night-rain-20"] }],
+    priceNote: "low",
+  },
+  {
+    id: "sleep-reset",
+    name: "Sleep Reset",
+    tier: "core",
+    for: "Trouble falling asleep or waking at night",
+    supports: "Supports sleep onset + bedtime calm",
+    durationDays: 14,
+    includes: ["2 curated playlists", "Sleep hypnosis + soundscapes", "Gentle weekly check-in"],
+    playlists: [
+      { name: "Bedtime (14 days)", trackIds: ["wind-down-5","sleep-hypno-29","night-rain-20"] },
+      { name: "If You Wake Up", trackIds: ["breath-reset-3","sleep-hypno-29","night-rain-20"] },
+    ],
+    priceNote: "mid",
+  },
+  {
+    id: "menopause-support",
+    name: "Menopause Support",
+    tier: "core",
+    for: "Hot flashes/night sweats + sleep disruption",
+    supports: "Supports coping with vasomotor symptoms + better sleep",
+    durationDays: 21,
+    includes: ["2 playlists (daytime + bedtime)", "Cooling imagery + sleep support", "Optional symptom journal check-ins"],
+    playlists: [
+      { name: "Daytime Coping", trackIds: ["cool-calm-10","breath-reset-3","night-rain-20"] },
+      { name: "Bedtime Support", trackIds: ["sleep-hypno-29","cooling-sound-20"] },
+    ],
+    priceNote: "mid",
+  },
+  {
+    id: "confidence-focus",
+    name: "Confidence & Focus",
+    tier: "core",
+    for: "Self-doubt, focus, performance nerves",
+    supports: "Supports steady confidence + attention",
+    durationDays: 14,
+    includes: ["1 playlist + prompts", "Focus hypnosis + music", "Simple goal tracker"],
+    playlists: [{ name: "Daily Focus", trackIds: ["focus-priming-12","deep-focus-18","wind-down-5"] }],
+    priceNote: "mid",
+  },
+  {
+    id: "deep-transformation",
+    name: "Deep Transformation",
+    tier: "premium",
+    for: "Multi-domain support + optional spiritual/sound medicine content",
+    supports: "Supports deep relaxation, emotional release, and renewal",
+    durationDays: 30,
+    includes: ["3 playlists + adaptive recommendations", "Opt‑in intention & sound", "Optional 1:1 add‑on placeholder"],
+    playlists: [
+      { name: "Nervous System Reset", trackIds: ["breath-reset-3","calm-mind-20","night-rain-20"] },
+      { name: "Emotional Release", trackIds: ["letting-go-20","night-rain-20"] },
+      { name: "Opt‑in: Intention & Sound", trackIds: ["sound-bath-20","wind-down-5"] },
+    ],
+    priceNote: "high",
+  },
+];
