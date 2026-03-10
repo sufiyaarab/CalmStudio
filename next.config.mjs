@@ -1,12 +1,15 @@
-/** @type {import('next').NextConfig} */
-const repo = "calmstudiobeta"; // e.g. "calmstudio-beta"
+const repo = "CalmStudio";
+const isProd = process.env.NODE_ENV === "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
   images: { unoptimized: true },
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
+  trailingSlash: true,
+
+  // Only apply basePath on production export (GitHub Pages)
+  basePath: isProd ? `/${repo}` : "",
+  assetPrefix: isProd ? `/${repo}/` : "",
 };
 
 export default nextConfig;

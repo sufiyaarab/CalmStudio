@@ -1,0 +1,2 @@
+:HL["/CalmStudio/_next/static/chunks/75d55804827a9a14.css","style"]
+0:{"buildId":"-tf8h__bHJ0uZCQjk2src","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"checkout","paramType":null,"paramKey":"checkout","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
