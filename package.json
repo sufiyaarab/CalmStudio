@@ -13,7 +13,7 @@
     "cap:add:ios": "npx cap add ios",
     "cap:add:android": "npx cap add android",
     "cap:sync": "npx cap sync",
-    "deploy": "gh-pages -d out --repo https://github.com/sufiyaarab/CalmStudio.git"
+    "deploy": "gh-pages -d out --repo https://github.com/AncaUni/CalmStudio.git"
   },
   "dependencies": {
     "classnames": "^2.5.1",
